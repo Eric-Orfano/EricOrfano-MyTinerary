@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CarrouselItems = ({arrayCities}) => {
+export const CarrouselComponent = ({arrayCities}) => {
   return (
     <div className="flex flex-wrap justify-center w-2/3 sm:2/3 2xl:w-2/5 gap-5 mb-16">
           {arrayCities.map((city) => (
@@ -16,4 +16,4 @@ export const CarrouselItems = ({arrayCities}) => {
   )
 }
 
-export default CarrouselItems
+export default CarrouselComponent

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CarrouselItems from "./CarrouselItems";
+import CarrouselComponent from "./CarrouselComponent";
 
 export const Carrousel = ({citys}) => {
   const [arrayCities, setArraycities] = useState(citys[0]);
@@ -21,7 +21,7 @@ export const Carrousel = ({citys}) => {
       <div className="flex flex-wrap justify-center h-full ">
         <h1 className="text-2xl w-full mt-8 mb-8 text-center text-black font-semibold bg-white opacity-60">Popular MyTineraries!</h1>
         <button className="mb-16" onClick={prev}> <img src="/flecha-izq.png" alt="" className="w-10 h-10" /> </button>
-        <CarrouselItems arrayCities={arrayCities} />
+        <CarrouselComponent arrayCities={arrayCities} />
         <button className="mb-16" onClick={next}> <img src="/flecha-der.png" alt="" className="w-10 h-10" /> </button>
       </div>
     </div>
