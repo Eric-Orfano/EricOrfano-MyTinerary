@@ -19,7 +19,7 @@ export const Carrousel = ({citys}) => {
   return (
     <div style={{ backgroundImage: 'url("./fondo2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="flex flex-wrap justify-center h-full ">
-        <h1 className="text-2xl w-full mt-8 mb-8 text-center text-black font-semibold bg-white opacity-60">Popular MyTineraries!</h1>
+        <h1 className="text-2xl w-full mt-8 mb-8 text-center text-black font-semibold bg-white opacity-60 italic">Popular MyTineraries!</h1>
         <button className="mb-16" onClick={prev}> <img src="/flecha-izq.png" alt="" className="w-10 h-10" /> </button>
         <CarrouselComponent arrayCities={arrayCities} />
         <button className="mb-16" onClick={next}> <img src="/flecha-der.png" alt="" className="w-10 h-10" /> </button>

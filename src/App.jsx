@@ -1,6 +1,7 @@
 import Layout from "./views/Layout"
 import Home from "./views/Home"
 import Cities from "./views/Cities"
+import Details from "./views/Details"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cities" element={<Cities />} />
+        <Route path="/Cities/:id" element= {<Details />}/>
       </Routes>
     </Layout>
   </BrowserRouter>
