@@ -6,11 +6,8 @@ import {filterByName, load} from'../redux/actions/citiesActions'
 
 export const Cities = () => {
   const inputSerch = useRef(null);
-
   const dispatch = useDispatch()
-  
   const {allCities, filtered, search} = useSelector( (store) => store.cities)
-
 
   useEffect(() =>{
     if(allCities.length == 0){
@@ -22,8 +19,6 @@ export const Cities = () => {
   const handleInput = () => {
     dispatch( filterByName(inputSerch.current.value))
   };
-
-  
 
   return (
     <>
@@ -38,7 +33,7 @@ export const Cities = () => {
             <CitiesCard key={city.id} cities={city} />
             ))
           ): (
-            <h2 className="text-2xl gap-5">No hay cuidades que coincidan con esa busqueda</h2>
+            <h2 className="text-2xl gap-5">There are no cities that match the search</h2>
           )}
         </section>
       </main>

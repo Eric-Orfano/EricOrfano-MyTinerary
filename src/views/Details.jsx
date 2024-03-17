@@ -2,11 +2,13 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getCitiesById } from "../services/citiesQueries";
 
+
 const Details = () => {
     const params = useParams();
     const [city, setCity] = useState({});
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+
     useEffect( () => {
         getCitiesById(params.id)
         .then((respuesta) => {
@@ -34,6 +36,8 @@ const Details = () => {
         backgroundPosition: 'center'
     }
 
+
+
     return (
         <main className="grow mt-20 bg-gray-500 italic  opa" style={backgroundImageStyle}>
         <div className="flex flex-col justify-center items-center mt-7">
@@ -42,8 +46,9 @@ const Details = () => {
             <img className="w-12/13 h-[500px] object-cover border border-solid m-4" src={city.image} alt="" />
             <Link to="/Cities" className="text-lg font-black border border-solid border-black rounded-lg p-2 shadow-[1px_7px_7px_1px_rgba(0,0,0,1)] bg-white">Back To The Cities</Link>
         </div>
-        <div className="flex justify-center text-center mb-2">
-            <h1 className=" mt-12 p-5 text-lg bg-white rounded-lg shadow-[1px_7px_7px_1px_rgba(0,0,0,1)]">Under Construction</h1>
+        <div className="flex flex-col items-center text-center mb-2">
+            <p className='w-48 mt-12 p-5 text-lg bg-white rounded-lg shadow-[1px_7px_7px_1px_rgba(0,0,0,1)]'>Ours Itinerarys</p>
+            <p className='w-48 mt-12 p-5 text-lg bg-white rounded-lg shadow-[1px_7px_7px_1px_rgba(0,0,0,1)]'>Under construction</p>
         </div>
     </main>
     )
