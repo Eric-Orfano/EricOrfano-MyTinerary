@@ -9,7 +9,7 @@ function Itinerary({ itinerario }) {
     return final;
   }
   return (
-    <div className="flex flex-col flex-wrap items-center mt-7 italic text-white">
+    <div className="flex flex-col flex-wrap items-center mt-7 italic text-white bg-gray-700 p-5">
       <h1 className="text-lg sm:text-xl md:text-2xl italic mb-2">{itinerario.title}</h1>
       <section className="">
         <img className="border border-solid my-5" src={itinerario.guide_image} alt={itinerario.guide} />
