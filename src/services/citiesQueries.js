@@ -18,3 +18,12 @@ export const getCitiesById = async (_id) => {
         return []
     }
 }
+
+export const getItineraries = async ( id ) =>{
+    try {
+        const respuesta = await axios ( "http://localhost:4000/api/itineraries/city/" + id )
+        return respuesta.data.data
+    } catch (error) {
+        return[]
+    }
+}

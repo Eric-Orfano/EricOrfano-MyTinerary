@@ -30,7 +30,7 @@ export const Cities = () => {
           </search>
           {filtered.length > 0 ? (
             filtered.map((city) => (
-            <CitiesCard key={city.id} cities={city} />
+            <CitiesCard key={city._id} cities={city} />
             ))
           ): (
             <h2 className="text-2xl gap-5">There are no cities that match the search</h2>
