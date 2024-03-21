@@ -12,7 +12,4 @@ const logout = createAction( 'logout', () => {
     }
 } )
 
-export {
-    login,
-    logout
-}
+export {login, logout}

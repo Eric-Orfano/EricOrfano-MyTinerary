@@ -30,8 +30,4 @@ const loginWithToken = async ( ) => {
     }
 }
 
-export default {
-    register,
-    login,
-    loginWithToken
-}
+export default {register, login, loginWithToken}

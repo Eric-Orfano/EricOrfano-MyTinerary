@@ -4,13 +4,15 @@ import Cities from "./views/Cities"
 import Details from "./views/Details"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import {useDispatch} from "react-redux"
-import Registro from "./views/Registro";
+import Registro from "./views/Register";
 import Login from "./views/Login";
 import { useEffect } from "react"
 import authQueries from "./services/authQueries";
 import alertas from "./utils/alertas";
 import { login } from "./redux/actions/userAction"; 
-
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+import AuthBlock from "./guard/AuthBlock"
 
 function App() {
   const dispatch = useDispatch();
@@ -30,10 +32,13 @@ function App() {
               <Route path="/" element={<Home />} />
             <Route path="/Cities" element={<Cities />} />
             <Route path="/Cities/:id" element= {<Details />} />
-            <Route path="/Registro" element= {<Registro />} />
-            <Route path="/Login" element= {<Login />} />
+            <Route element={<AuthBlock />}>
+              <Route path="/Registro" element= {<Registro />} />
+              <Route path="/Login" element= {<Login />} />
+            </Route>  
           </Routes>
         </Layout>
+        <ToastContainer /> 
     </BrowserRouter>
     
   )

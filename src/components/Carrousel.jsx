@@ -30,4 +30,3 @@ export const Carrousel = ({citys}) => {
 
 export default Carrousel
 
-// style={{ backgroundImage: 'url("./fondo2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
